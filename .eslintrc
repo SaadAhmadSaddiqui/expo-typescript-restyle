@@ -1,0 +1,71 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true,
+		"jest/globals": true,
+		"react-native/react-native": true
+	},
+	"extends": ["plugin:react-native/all", "eslint:recommended", "plugin:react-perf/recommended", "plugin:react-hooks/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-native", "@typescript-eslint", "prettier", "jest", "import"],
+	"rules": {
+		// Base Rules
+		"max-len": ["error", {"code": 160, "ignoreComments": true, "ignoreStrings": true}],
+		"no-console": 1,
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"object-curly-spacing": ["error", "always"],
+		// Prettier
+		"prettier/prettier": ["error", { "endOfLine": "auto" }],
+		// Jest
+		"jest/no-disabled-tests": "warn",
+		"jest/no-focused-tests": "error",
+		"jest/no-identical-title": "error",
+		"jest/prefer-to-have-length": "warn",
+		"jest/valid-expect": "error",
+		// React
+		"react/function-component-definition": [2, { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }],
+		"react/react-in-jsx-scope": "off",
+		// Import
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+				"pathGroups": [
+					{
+						"pattern": "react*",
+						"group": "builtin",
+						"position": "before"
+					},
+					{
+						"pattern": "react-native",
+						"group": "builtin",
+						"position": "before"
+					},
+					{
+						"pattern": "assets/**/*",
+						"group": "index",
+						"position": "after"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["react"],
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				},
+				"newlines-between": "always"
+			}
+		],
+		// Conflicting Rules
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+		// React Native
+		"react-native/no-raw-text": "off"
+		// React Hooks
+	}
+}
