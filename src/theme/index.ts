@@ -90,6 +90,60 @@ const theme = createTheme({
 			fontFamily: "regular",
 			lineHeight: 28,
 		},
+		heading1Medium: {
+			fontSize: 30,
+			fontWeight: "500",
+			fontFamily: "medium",
+			lineHeight: 36,
+		},
+		heading2Medium: {
+			fontSize: 28,
+			fontWeight: "500",
+			fontFamily: "medium",
+			lineHeight: 32,
+		},
+		heading3Medium: {
+			fontSize: 24,
+			fontWeight: "500",
+			fontFamily: "medium",
+			lineHeight: 28,
+		},
+		heading1Semibold: {
+			fontSize: 30,
+			fontWeight: "500",
+			fontFamily: "semiBold",
+			lineHeight: 36,
+		},
+		heading2Semibold: {
+			fontSize: 28,
+			fontWeight: "500",
+			fontFamily: "semiBold",
+			lineHeight: 32,
+		},
+		heading3Semibold: {
+			fontSize: 24,
+			fontWeight: "500",
+			fontFamily: "semiBold",
+			lineHeight: 28,
+		},
+		heading1Bold: {
+			fontSize: 30,
+			fontWeight: "700",
+			fontFamily: "bold",
+			lineHeight: 36,
+		},
+		heading2Bold: {
+			fontSize: 28,
+			fontWeight: "700",
+			fontFamily: "bold",
+			lineHeight: 32,
+		},
+		heading3Bold: {
+			fontSize: 24,
+			fontWeight: "700",
+			fontFamily: "bold",
+			lineHeight: 28,
+		},
 		// Subtitle1
 		subtitle1Regular: {
 			fontSize: 20,

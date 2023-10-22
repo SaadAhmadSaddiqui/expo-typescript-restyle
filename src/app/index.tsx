@@ -14,7 +14,7 @@ const App = () => {
 	const viewStyle: ViewStyle = useMemo(() => ({ paddingTop: safeAreaInsets.top, paddingBottom: safeAreaInsets.bottom }), [safeAreaInsets]);
 
 	return (
-		<Box backgroundColor={"primaryBackground"} style={viewStyle} flex={1} padding={"-5xl"}>
+		<Box backgroundColor={""} style={viewStyle} flex={1} padding={"-5xl"}>
 			<Box width={"100%"} style={viewStyle} justifyContent={"flex-end"} alignItems="flex-end" position={"absolute"}>
 				<Switch label="Dark Mode" value={darkMode} onValueChange={setDarkMode} />
 			</Box>
